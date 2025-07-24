@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Game Grid</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>Game Grid</h1>
+    <button id="toggleTheme">🌙</button>
+  </header>
+  <main>
+    <section id="turfsContainer"></section>
+
+    <section id="bookingSection">
+      <h2>📅 Your Bookings</h2>
+      <ul id="bookingList"></ul>
+    </section>
+
+    <button id="openAdmin">➕ Add Turf</button>
+
+    <div id="bookingModal" class="modal hidden">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h3 id="modalTurfName">Book Turf</h3>
+        <p>Select Slot:</p>
+        <div id="slotButtons"></div>
+        <button id="confirmBooking">Confirm Booking</button>
+      </div>
+    </div>
+
+    <div id="adminModal" class="modal hidden">
+      <div class="modal-content">
+        <span class="closeAdmin">&times;</span>
+        <h3>Add New Turf Booking</h3>
+        <input type="text" id="adminTurfName" placeholder="Turf Name" />
+        <input type="text" id="adminLocation" placeholder="Location" />
+        <input type="number" id="adminPrice" placeholder="Price" />
+        <input type="text" id="adminSlots" placeholder="Slots (e.g. 8:00,9:00)" />
+        <button id="addTurfBtn">Add Turf</button>
+      </div>
+    </div>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
